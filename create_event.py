@@ -7,8 +7,6 @@ def main():
    service = get_calendar_service()
 
    d = datetime.now().date()
-   # create an event in the primary calendar at 10 AM the next day
-   # in IST timezone. Also save the event ID for later use.
    tomorrow = datetime(d.year, d.month, d.day, 10)+timedelta(days=1)
    start = tomorrow.isoformat()
    end = (tomorrow + timedelta(hours=1)).isoformat()

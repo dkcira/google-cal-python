@@ -13,7 +13,7 @@ def main():
 
     event_result = service.events().update(
       calendarId='primary',
-      eventId='<place your event ID here>',
+      eventId='ehlrc0gle2s9goecvu7l0vi3qc',
       body={
        "summary": 'Updated Automating calendar',
        "description": 'This is a tutorial example of automating google calendar with python, updated time.',
