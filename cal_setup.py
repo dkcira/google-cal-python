@@ -4,12 +4,15 @@ import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from pathlib import Path
+
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
-CREDENTIALS_FILE = '~/.scr/gcal_client.json'
-TOKEN_FILE='~/.scr/token.pickle'
+HOME = str(Path.home())
+CREDENTIALS_FILE = HOME + '/.scr/gcal_client.json'
+TOKEN_FILE = HOME + '/.scr/token.pickle'
 
 def get_calendar_service():
    creds = None
